@@ -58,7 +58,7 @@
                     </li>
                     <li><a class="ticker-btn" href="http://fstm.kuis.edu.my" target="_blank">FSTMWeb Rasmi</a></li>
 
-                    <li><a class="nav-link" href="#">Login</a></li>
+                    <li><a class="nav-link" href="login.php">Login</a></li>
                     <li><a class="nav-link" href="#">Daftar</a></li>
 
         </div>
