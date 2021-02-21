@@ -1,5 +1,5 @@
 <?php
-//file name forminsert-tempahan.php
+//update kepada file forminsert-tempahan.php
 include "checksession.php";
 include "header.template.php";
 include "connection.php";
@@ -13,7 +13,11 @@ include "connection.php";
 	<input type="text" name="telefon" 
 	class="form-control">
 	Tarikh penggunaan gelanggang
-	<input type="date" name="tarikh"
+	<?php
+		$todaydate=date('Y-m-d');
+	?>
+	<input type="date" name="tarikh" 
+	min="<?php echo $todaydate ?>"
 	class="form-control">
 
 	<?php
@@ -48,9 +52,11 @@ if(isset($_POST['namapelanggan']) &&
 	$namapelanggan=$_POST['namapelanggan'];
 	$tarikh = $_POST['tarikh'];
 	$telefon=$_POST['telefon'];
+	$idgelanggang=$_POST['idgelanggang'];
 	//sql insert
-	$sql="INSERT INTO tempahan (namapelanggan, tarikh, telefon) 
-	VALUES ('$namapelanggan','$tarikh','$telefon')";
+	$sql="INSERT INTO tempahan (namapelanggan, tarikh, telefon,idgelanggang) 
+	VALUES ('$namapelanggan','$tarikh',
+		'$telefon','$idgelanggang')";
 	//echo "$sql <br>";
 	//execute sql
 	$rs=mysqli_query($db, $sql);

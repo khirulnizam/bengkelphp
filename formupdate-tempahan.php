@@ -1,7 +1,7 @@
 <?php
 //formupdate-tempahan.php
 include "checksession.php";
-include "header.template.php";
+include "header.bootslander.php";
 include "connection.php";
 //id sent by previous page
 $id=$_GET['id'];
@@ -39,5 +39,5 @@ $telefon=$rec['telefon'];
 </form>
 
 <?php
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>

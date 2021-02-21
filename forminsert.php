@@ -1,6 +1,6 @@
 <?php
 include "checksession.php";
-include "header.template.php";
+include "header.bootslander.php";
 ?>
 <!-- forminsert.php -->
 <form action="insertrecord.php" method="get">
@@ -17,5 +17,5 @@ include "header.template.php";
     class="btn btn-primary">
 </form>
 <?php
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>

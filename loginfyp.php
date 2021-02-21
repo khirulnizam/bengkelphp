@@ -1,6 +1,6 @@
 <?php
 //loginfyp.php
-include "header.template.php";
+include "header.bootslander.php";
 if (isset($_GET['msg'])){//login error message
     $msg=$_GET['msg'];
     echo "<div class='alert alert-warning'>
@@ -21,5 +21,5 @@ if (isset($_GET['msg'])){//login error message
 </form>
 <?php
 //loginfyp.php
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>

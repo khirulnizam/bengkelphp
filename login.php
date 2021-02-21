@@ -1,7 +1,7 @@
 <?php
 //login.php
 //include "checksession.php";
-include "header.template.php";
+include "header.bootslander.php";
 if (isset($_GET['msg'])){//login error message
     $cardmode="border-warning";
     $msg="Ralat: ".$_GET['msg'];
@@ -30,5 +30,5 @@ if (isset($_GET['msg'])){//login error message
         </div>
 
 <?php
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>

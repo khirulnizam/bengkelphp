@@ -1,6 +1,6 @@
 <?php
 include "checksession.php";
-include "header.template.php";
+include "header.bootslander.php";
 ?>
 <h4>Carian nama pelajar </h4>
 <!-- searchadmin.php -->
@@ -69,5 +69,5 @@ include "header.template.php";
 ?>
 
 <?php
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>

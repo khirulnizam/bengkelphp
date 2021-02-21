@@ -1,7 +1,7 @@
 <?php
 //formsearch-tempahan.php
 include "checksession.php";
-include "header.template.php";
+include "header.bootslander.php";
 include "connection.php";
 ?>
 
@@ -71,5 +71,5 @@ if(isset($_GET['carian'])){
 </table>
 
 <?php
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>

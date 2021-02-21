@@ -1,7 +1,7 @@
 <?php
 //saveupdate-tempahan.php
 include "checksession.php";
-include "header.template.php";
+include "header.bootslander.php";
 include "connection.php";
 
 
@@ -36,5 +36,5 @@ else{
 	echo "Masukkan data nama, telefon, tarikh tempahan";
 }
 
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>

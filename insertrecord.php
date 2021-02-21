@@ -1,6 +1,6 @@
 <?php
 include "checksession.php";
-include "header.template.php";
+include "header.bootslander.php";
 include "connection.php";
 //insertrecord.php
 
@@ -25,5 +25,5 @@ if ($rs==true){
 ?>
 
 <?php
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>

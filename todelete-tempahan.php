@@ -1,7 +1,7 @@
 <?php
 //rename todelete-tempahan.php
 include "checksession.php";
-include "header.template.php";
+include "header.bootslander.php";
 $id=$_GET['id'];
 ?>
 <h4>Anda pasti nak padam rekod tempahan <?php echo $id?> ?
@@ -13,6 +13,6 @@ $id=$_GET['id'];
    class="btn btn-outline-dark">TIDAK</a>
 
 <?php
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>
 
