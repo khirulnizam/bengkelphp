@@ -15,6 +15,24 @@ include "connection.php";
 	Tarikh penggunaan gelanggang
 	<input type="date" name="tarikh"
 	class="form-control">
+
+	<?php
+		//sql query untuk rekod dari jadual gelanggang
+		$sqlgel="SELECT * FROM gelanggang";
+		$rsgel=mysqli_query($db, $sqlgel);
+	?>
+
+	Pilih gelanggang
+	<select name="idgelanggang" class="form-control">
+		<?php
+		while ($recgel=mysqli_fetch_array($rsgel)){
+			$namagel=$recgel['namagelanggang'];
+			$jenisukan=$recgel['jenisukan'];
+			echo "<option value='$namagel'>$namagel - $jenisukan </option>";
+		}
+		?>
+	</select>
+
 	<input type="submit" value="Simpan tempahan" class="btn btn-success">
 </form>
 
