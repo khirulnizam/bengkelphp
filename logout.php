@@ -6,8 +6,8 @@ if(isset($_SESSION["namapengguna"])) { //if session NOT set
     session_destroy();
     //echo "Pengguna dah logout";
     //echo "<a href='login.php'>click here to login.</a>";
-    header ("location: login.php?msg=Sila login dahulu");
+    header ("location: loginfyp.php?msg=Sila login dahulu");
 }else{
-    header ("location: login.php");
+    header ("location: loginfyp.php");
 }
 ?>
