@@ -1,6 +1,5 @@
 <?php
     include "header.bootslander.php";
-    
 ?>
 <!-- 1formaduan.php 
 CRUD - create record
