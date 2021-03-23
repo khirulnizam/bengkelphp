@@ -2,9 +2,12 @@
 include "header.bootslander.php";
 ?>
 <!-- 1formsearchaduan.php -->
-<form method="get" action="">
-    <input type="text" name="carian">
-    <input type="submit" value="Carian aduan">
+<form method="get" action="" class="form-inline">
+    <input type="text" name="carian"
+    class="form-control">
+    <button type="submit" class="btn btn-primary">
+        <i class="fa fa-search"></i>
+    </button>
 </form>
 
 <hr>
@@ -15,7 +18,7 @@ if(isset($_GET['carian'])){//semak carian
     //echo "user dah klik carian";
     $carian=$_GET['carian'];
     include "connection.php";
-    $sql="SELECT namapengadu, deskripsi
+    $sql="SELECT id, namapengadu, deskripsi
     FROM aduan
     WHERE deskripsi LIKE '%$carian%'
     OR namapengadu LIKE '%$carian%' ";
@@ -33,10 +36,13 @@ if(isset($_GET['carian'])){//semak carian
     <?php
     while($rec=mysqli_fetch_array($rs)){
         //fetch 1 record
+        $id=$rec['id'];
         echo "<tr>";
         echo "<td>".$rec['namapengadu']."</td>";
         echo "<td>".$rec['deskripsi']."</td>";
-        echo "<td></td>";
+        echo "<td><a class='btn btn-warning' 
+                href='1formupdate.php?id=$id'>
+                <i class='fa fa-edit'></i></a></td>";
         echo "</tr>";
     }
     echo "</table>";
