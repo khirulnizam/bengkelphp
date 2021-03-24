@@ -42,7 +42,10 @@ if(isset($_GET['carian'])){//semak carian
         echo "<td>".$rec['deskripsi']."</td>";
         echo "<td><a class='btn btn-warning' 
                 href='1formupdate.php?id=$id'>
-                <i class='fa fa-edit'></i></a></td>";
+                <i class='fa fa-edit'></i></a>";
+        echo "<a class='btn btn-danger' 
+                href='1confirmdeleteaduan.php?id=$id'>
+                <i class='fa fa-trash'></i></a></td>";
         echo "</tr>";
     }
     echo "</table>";
