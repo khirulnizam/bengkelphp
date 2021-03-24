@@ -96,6 +96,8 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <script src="cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  
   <script src="Bootslander/assets/vendor/jquery/jquery.min.js"></script>
   <script src="Bootslander/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="Bootslander/assets/vendor/jquery.easing/jquery.easing.min.js"></script>

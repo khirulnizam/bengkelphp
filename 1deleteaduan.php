@@ -1,4 +1,5 @@
 <?php
+include "checksession.php";
 include "header.bootslander.php";
 include "connection.php";
 ?>

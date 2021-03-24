@@ -12,6 +12,10 @@
     <a href="forminsert-tempahan.php"
     class="btn btn-primary btn-block">
     Tempahan baharu </a>
-
-    <a href="logout.php" class="btn btn-primary btn-block">Logout</a>
+<?php
+if(!isset($_SESSION["namapengguna"])) { //if session NOT set
+    echo '<a href="login-or-register.php" class="btn btn-success btn-block">Login</a>';
+}else{
+    echo '<a href="logout.php" class="btn btn-primary btn-block">Logout</a>';
+} ?>
     <!--  END MENU -->

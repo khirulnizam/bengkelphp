@@ -22,7 +22,7 @@ if($_POST['rlogindaftar']=="login"){
 			$_SESSION["sessionid"]=session_id();
 			$_SESSION["namapengguna"]=$rec['namapengguna'];
 			$_SESSION["namapenuh"]=$rec['namapenuh'];
-			header ("location: formsearch-tempahan.php");
+			header ("location: 1formsearchaduan.php");
 			//echo "berjaya masuk";
 			//daftar session
 		}//padanan gagal

@@ -24,9 +24,11 @@
   <link href="Bootslander/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="Bootslander/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="Bootslander/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="Bootslander/assets/css/style.css" rel="stylesheet">
+
 
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -46,7 +48,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>FSTM KUIS</span></a></h1>
+        <h1 class="text-light"><a href="index.html"><span>Aduan KPKT</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -91,7 +93,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Sistem Tempahan Gelanggang Pelajar</h2>
+          <h2>Sistem Aduan Komputer JKT</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li>Inner Page</li>

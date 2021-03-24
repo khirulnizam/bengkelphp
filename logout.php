@@ -8,6 +8,6 @@ if(isset($_SESSION["namapengguna"])) { //if session NOT set
     //echo "<a href='login.php'>click here to login.</a>";
     header ("location: login-or-register.php?msg=Sila login dahulu");
 }else{
-    header ("location: login-or-register .php");
+    header ("location: login-or-register.php");
 }
 ?>

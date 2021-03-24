@@ -1,4 +1,5 @@
 <?php
+    //include "checksession.php";
     include "header.bootslander.php";
 ?>
 <!-- 1formaduan.php 
@@ -15,12 +16,23 @@ CRUD - create record
     Deskripsi Aduan
     <textarea name="deskripsi"
     class="form-control"></textarea>
+
+    <?php
+        include "connection.php";
+        $sql="SELECT kodkategori, deskaduan
+        FROM kategoriaduan";
+        $rs=mysqli_query($db, $sql);
+    ?>
     Kategori Aduan
     <select name="kategori"
     class="form-control">
-        <option value="K1">Komputer rosak</option>
-        <option value="V1">Serangan Virus</option>
-        <option value="R1">Rangkaian </option>
+    <?php
+        while($rec=mysqli_fetch_array($rs)){
+            $kod=$rec['kodkategori'];
+            $desk=$rec['deskaduan'];
+            echo "<option value='$kod'>$desk</option>";
+        }//end while
+    ?>
     </select>
     <input type="submit" value="Hantar aduan">
     <input type="reset" value="Kosongkan">
