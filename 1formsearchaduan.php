@@ -23,7 +23,7 @@ if(isset($_GET['carian'])){//semak carian
     $carian="";
 }else{
     //echo "user dah klik carian";
-    $carian=$_GET['carian'];
+    $carian="";
 }
     
     $sql="SELECT aduan.id, namapengadu, deskripsi, kategori, deskaduan

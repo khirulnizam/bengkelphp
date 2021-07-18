@@ -1,7 +1,7 @@
 <?php
 //update kepada file forminsert-tempahan.php
 include "checksession.php";
-include "header.template.php";
+include "header.bootslander.php";
 include "connection.php";
 ?>
 <h1>Borang tempahan gelanggang</h1>
@@ -73,5 +73,5 @@ else{
 	echo "Masukkan data nama, telefon, tarikh tempahan";
 }
 
-include "footer.template.php";
+include "footer.bootslander.php";
 ?>

@@ -1,0 +1,7 @@
+Latihan
+1. Tambah satu lagi jadual bernama kategorimenu
+2. Tambahkan kepada jadual kategorimenu 3columns
+    2.1 Column id (index primary key & auto-increment)
+    2.2 Column kodkategori
+    2.3 Column deskategori
+3. Buat satu borang html/php untuk masukkan rekod baru dalam table kategorimenu
