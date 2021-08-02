@@ -1,6 +1,6 @@
 <?php 
     //01formlogin.php
-    include "header.bootslander.php";
+    include "../header.bootslander.php";
 ?>
 <h1>Borang login</h1>
 <form action="01verify.php" method="post">
@@ -22,5 +22,5 @@
 
 
 <?php 
-    include "footer.bootslander.php";
+    include "../footer.bootslander.php";
 ?>

@@ -59,14 +59,14 @@
             <a target="_blank"
             href="https://www.youtube.com/c/FSTMKUISFakultiSainsTeknologiMaklumat">Rakaman Youtube BengkelPHP</a></li>
 
-          <li><a href="#pricing">Menu Tempahan</a></li>
-          <li class="drop-down"><a href="">Menu Makanan</a>
+
+          <li class="drop-down"><a href="">Menu Pelajar</a>
             <ul>
-              <li><a href="01formcarianmakan.php">Carian makanan</a></li>
-              <li><a href="01forminsertmakan.php">Tambah menu makanan</a></li>
+              <li><a href="searchadmin.php">Carian pelajar</a></li>
+              <li><a href="forminsert.php">Tambah rekod pelajar</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a target="_blank" href="http://fstm.kuis.edu.my/blog/">Hubungi</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -81,7 +81,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Sistem Aduan Komputer JKT</h2>
+          <h2>Sistem Pengurusan Pelajar</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li>Inner Page</li>

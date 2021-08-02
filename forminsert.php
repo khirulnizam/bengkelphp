@@ -1,5 +1,5 @@
 <?php
-include "checksession.php";
+//include "checksession.php";
 include "header.bootslander.php";
 ?>
 <!-- forminsert.php -->

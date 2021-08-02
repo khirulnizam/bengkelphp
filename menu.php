@@ -1,19 +1,33 @@
 <!-- menu.php
      YOUR MENU HERE -->
-<a href="https://www.youtube.com/c/FSTMKUISFakultiSainsTeknologiMaklumat" 
-class="btn btn-primary btn-block">
-    Rakaman Bengkel Youtube</a>
+
+     <h4>Menu pelajar</h4>
+    <a href="searchadmin.php" class="btn btn-primary btn-block">
+    Carian pelajar</a>
+    <a href="forminsert.php" class="btn btn-primary btn-block">
+    Tambah rekod pelajar</a>
+
+<a target="_blank" href="https://www.youtube.com/c/FSTMKUISFakultiSainsTeknologiMaklumat" 
+class="btn btn-secondary btn-block">
+    Rakaman Youtube BengkelPHP</a>
 <!--  MENU LOGIN -->
-<h4>Login/daftar pengguna</h4>
-    <a href="01daftarpengguna.php" class="btn btn-primary btn-block">
-    Daftar Pengguna</a>
+
      <?php
 if(!isset($_SESSION["namapengguna"])) { //if session NOT set
-    echo '<a href="01formlogin.php" class="btn btn-success btn-block">Login</a>';
+    echo '<a href="login.php" class="btn btn-success btn-block">Login</a>';
 }else{
-    echo '<a href="01logout.php" class="btn btn-primary btn-block">Logout</a>';
+    echo '<a href="logout.php" class="btn btn-primary btn-block">Logout</a>';
 } ?>
-    <!--  END MENU -->
+
+    
+
+
+
+    <!-- old reserve 
+    <h4>Login/daftar pengguna</h4>
+    <a href="01daftarpengguna.php" class="btn btn-primary btn-block">
+    Daftar Pengguna</a>
+
     <h4>Menu makanan</h4>
     <a href="01formcarianmakan.php" class="btn btn-primary btn-block">
     Carian makanan</a>
@@ -24,7 +38,7 @@ if(!isset($_SESSION["namapengguna"])) { //if session NOT set
     Carian aduan</a>
     <a href="1formaduan.php" class="btn btn-primary btn-block">
     Masukkan aduan</a>
-    <!-- footer.template.php -->
+
     <h4>Menu tempahan gelanggang</h4>
     <a href="formsearch-tempahan.php"
     class="btn btn-primary btn-block">
@@ -32,3 +46,5 @@ if(!isset($_SESSION["namapengguna"])) { //if session NOT set
     <a href="forminsert-tempahan.php"
     class="btn btn-primary btn-block">
     Tempahan baharu </a>
+
+-->
