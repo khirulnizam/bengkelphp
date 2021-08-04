@@ -12,12 +12,23 @@
         //display.php 
         //2nd file
         //capture data
-        $data1=$_POST['namapengguna'];
-        $data2=$_POST['katalaluan'];
+        $namapengguna=$_POST['namapengguna'];
+        $katalaluan=$_POST['katalaluan'];
 
-        //papar data
-        echo "Selamat datang $data1<br>";
-        echo "Rahsiakan katalaluan anda $data2<br>";
+        //checking
+        if($katalaluan==null && $namapengguna==null){
+            echo "Pastikan key-in namapengguna & katalaluan";
+        }else if($katalaluan==null){
+            echo "Pastikan key-in katalaluan";
+        }else if($namapengguna==null){
+            echo "Pastikan key-in namapengguna";
+        }else{
+            //papar data
+            echo "Selamat datang $namapengguna<br>";
+            echo "Rahsiakan katalaluan anda $katalaluan<br>";
+            //todo: proses banding dengan database
+        }
+        
     ?>
 </body>
 </html>
