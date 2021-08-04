@@ -1,7 +1,7 @@
 <?php
 include "01checksession.php";
 //01forminsertmakan.php
-include "./header.bootslander.php";
+include "<div class="">header.bootslander.php";
 ?>
 <form action="01insertmakan.php" method="post">
     Nama menu

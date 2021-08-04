@@ -8,7 +8,7 @@
         header ("location: 01formlogin.php?msg=Sila login dahulu");
     }
     //01formcarianmakan.php
-    include "header.bootslander.php";
+    include "..\header.bootslander.php";
 ?>
 <div>
     <?php
