@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- pembolehubah.php -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,16 +12,21 @@
     <!-- contoh html comment -->
 
     <?php
-        //komen dalam php
-        $saya="Ali Abu";
-        $noic="770707-07-7070";
-        $harga=5.50;
-        //papar data
-        echo "Nama saya $saya <br>\n";
-        echo "NoIC saya $noic <br>\n";
-        echo "Harga barang ini RM".sprintf("%01.2f", $harga);
-        //printf
-        //sprintf
+        $harga=$_GET['harga'];
+        $bil=$_GET['bil'];
+        if(is_numeric($harga) && is_numeric($bil)){
+            $jumlah=$harga*$bil;
+            //komen dalam php
+            $saya="Ali Abu";
+            $noic="770707077070";
+            //$harga=5.50;
+            //papar data
+            echo "Nama saya $saya <br>\n";
+            echo "NoIC saya $noic <br>\n";
+            echo "Harga beras $bil kilo adalah RM".sprintf("%01.2f", $jumlah);
+        }else{
+            echo "Hanya masukkan nombor dalam ruangan harga dan kilo";
+        }//end else
 
     ?>
 </body>
