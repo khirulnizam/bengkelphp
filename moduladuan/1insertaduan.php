@@ -20,7 +20,7 @@ VALUES ('$namapengadu', '$telefon','$deskripsi',
 '$kategori','$tarikhmasa')";
 
 //execute command sql
-$rs=mysqli_query($db,$sql);
+$rs=mysqli_query($conn,$sql);
 if($rs==true){
     echo "Aduan berjaya dihantar";
 }

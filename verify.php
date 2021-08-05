@@ -9,7 +9,7 @@ $sql="SELECT * FROM pengguna
     AND 
     katalaluan=MD5('$katalaluan')";
 //execute sql
-$rs=mysqli_query($db, $sql);
+$rs=mysqli_query($conn, $sql);
 //echo mysqli_error($db);
 //echo $sql;
 //test password match

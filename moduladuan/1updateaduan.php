@@ -20,7 +20,7 @@ SET namapengadu='$namapengadu',
 WHERE id='$id' ";
 echo "$sql";
 //execute command sql
-$rs=mysqli_query($db,$sql);
+$rs=mysqli_query($conn,$sql);
 if($rs==true){
     echo "Aduan berjaya dikemaskini";
 }

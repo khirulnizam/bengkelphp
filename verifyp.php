@@ -9,7 +9,7 @@ $sql="SELECT id, namapengguna, katalaluan,namapenuh from pengguna
 	WHERE namapengguna='$namapengguna' AND 
 	katalaluan=MD5('$katalaluan') ";
 	//echo $sql;
-$rs=mysqli_query($db, $sql);
+$rs=mysqli_query($conn, $sql);
 //semakan
 if(mysqli_error($db)){
 	echo "Ralat sql/db<br>";

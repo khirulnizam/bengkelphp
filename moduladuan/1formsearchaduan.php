@@ -32,8 +32,8 @@ if(isset($_GET['carian'])){//semak carian
     ON aduan.kategori=kategoriaduan.kodkategori
     WHERE deskripsi LIKE '%$carian%'
     OR namapengadu LIKE '%$carian%' ";
-    $rs=mysqli_query($db, $sql);
-    echo mysqli_error($db);
+    $rs=mysqli_query($conn, $sql);
+    echo mysqli_error($conn);
     ?>
 
     <table class="table">

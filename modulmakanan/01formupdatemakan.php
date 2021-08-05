@@ -6,7 +6,7 @@ include "connection.php";
 $id=$_GET['id'];
 $sql="select * from makanan 
         where id='$id' ";
-$rs=mysqli_query($db, $sql);
+$rs=mysqli_query($conn, $sql);
 $rec=mysqli_fetch_array($rs);
 ?>
 <form action="01updatemakan.php" method="post">

@@ -13,11 +13,11 @@ $sql="insert into makanan
     values
     ('$menu','$harga','$kategori')";
 //execute
-$rs=mysqli_query($db, $sql);
+$rs=mysqli_query($conn, $sql);
 //echo "Sql: $sql <br>";//debugging
 if($rs==false){//gagal
     //debug
-    echo "Error: ".mysqli_error($db);
+    echo "Error: ".mysqli_error($conn);
 }else{//berjaya simpan rekod baru
     //echo "Berjaya simpan rekod";
     header ("location: 01forminsertmakan.php?msg=Berjaya simpan rekod");//redirect

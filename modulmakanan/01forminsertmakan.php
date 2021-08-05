@@ -16,7 +16,7 @@ include "<div class="">header.bootslander.php";
             //list dropdown
             include "connection.php";
             $sql="select * from kategorimenu";
-            $rs=mysqli_query($db, $sql);
+            $rs=mysqli_query($conn, $sql);
             while($rec=mysqli_fetch_array($rs)){
                 $kod=$rec['kodkategori'];
                 $deskategori=$rec['deskategori'];

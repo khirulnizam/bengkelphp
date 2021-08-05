@@ -22,14 +22,14 @@ if(isset($_POST['namapelanggan']) &&
 		WHERE id ='$id'";
 	//echo "$sql <br>";
 	//execute sql
-	$rs=mysqli_query($db, $sql);
+	$rs=mysqli_query($conn, $sql);
 	//semak 
 	if($rs==true){
 		echo "Kemaskini untuk $namapelanggan 
 		berjaya disimpan";
 	}else{
 		echo "Tempahan gagal dikemaskini";
-		echo mysqli_error($db);
+		echo mysqli_error($conn);
 	}
 }
 else{

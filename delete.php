@@ -1,5 +1,5 @@
 <?php
-include "header.template.php";
+include "header.bootslander.php";
 include "connection.php";
 ?>
 <?php
@@ -13,7 +13,7 @@ $sql="DELETE FROM pelajar
       WHERE IDPelajar ='$id'";
 
 //run sql query
-$rs=mysqli_query($db, $sql);
+$rs=mysqli_query($conn, $sql);
 
 //feedback operation successfull
 if($rs=true){

@@ -8,7 +8,7 @@ $id=$_GET['id'];
 $sql="SELECT * FROM pelajar
       WHERE IDPelajar='$id' ";
 //run sql query
-$rs = mysqli_query($db, $sql);
+$rs = mysqli_query($dconn, $sql);
 //capture record
 $record=mysqli_fetch_array($rs);
 ?>

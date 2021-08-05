@@ -21,7 +21,7 @@ CRUD - create record
         include "connection.php";
         $sql="SELECT kodkategori, deskaduan
         FROM kategoriaduan";
-        $rs=mysqli_query($db, $sql);
+        $rs=mysqli_query($conn, $sql);
     ?>
     Kategori Aduan
     <select name="kategori"

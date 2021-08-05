@@ -39,12 +39,12 @@
                 (namapengguna, katalaluan, namapenuh)
                 value('$namapengguna',md5('$katalaluan'),'$namapenuh')";
                 //exeucte
-                $rs=mysqli_query($db, $sql);
+                $rs=mysqli_query($conn, $sql);
                 if($rs==true){
                     echo "Pengguna baru telah didaftarkan $namapengguna";
                 }
                 else{//gagal daftar
-                    echo "Daftar gagal ". mysqli_error($db);
+                    echo "Daftar gagal ". mysqli_error($conn);
                 }
             }
             else{

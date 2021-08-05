@@ -48,13 +48,13 @@
     or kategori like '%$carian%' ";
     //run query
     include "connection.php";
-    $rs=mysqli_query($db, $sql);
+    $rs=mysqli_query($conn, $sql);
 
     //ada padanan?
     if(mysqli_num_rows($rs)==0){
         echo "Tiada padanan dijumpai<br>";
         echo "$sql";
-        echo mysqli_error($db);
+        echo mysqli_error($conn);
     }//tiada padanan
     else{
         //berjaya jumpa carian

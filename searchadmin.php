@@ -24,7 +24,7 @@ include "header.bootslander.php";
           WHERE NamaPel LIKE '%$searchName%' ";
 
     //run sql
-    $rs=mysqli_query($db, $sql);
+    $rs=mysqli_query($conn, $sql);
     if($rs==false) {//if sql error
         echo("SQL Error : " . mysqli_error($db));
     }

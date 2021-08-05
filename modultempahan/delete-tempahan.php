@@ -15,7 +15,7 @@ $sql="DELETE FROM tempahan
       WHERE id ='$id'";
 
 //run sql query
-$rs=mysqli_query($db, $sql);
+$rs=mysqli_query($conn, $sql);
 
 //feedback operation successfull
 if($rs=true){

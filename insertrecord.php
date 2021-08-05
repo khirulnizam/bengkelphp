@@ -13,7 +13,7 @@ $sql="INSERT INTO pelajar(NamaPel,Alamat)
       VALUES ('$namapel','$alamat')";
 
 //run sql query - save record to dbserver
-$rs=mysqli_query($db, $sql);
+$rs=mysqli_query($con, $sql);
 
 //berjaya/tidak
 if ($rs==true){

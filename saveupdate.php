@@ -15,7 +15,7 @@ $sql="UPDATE pelajar
       WHERE IDPelajar='$id' ";
 
 //run sql query - save record to dbserver
-$rs=mysqli_query($db, $sql);
+$rs=mysqli_query($conn, $sql);
 
 //berjaya/tidak
 if ($rs==true){

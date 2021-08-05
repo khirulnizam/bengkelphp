@@ -27,7 +27,7 @@ if(isset($_GET['carian'])){
 		WHERE namapelanggan LIKE '%$carian%' ";
 	//echo "$sql <br>";
 	//execute sql
-	$rs=mysqli_query($db, $sql);
+	$rs=mysqli_query($conn, $sql);
 
 	//carian tak dijumpai
 	if(mysqli_num_rows($rs)==0){

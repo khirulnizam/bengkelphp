@@ -23,7 +23,7 @@ include "connection.php";
 	<?php
 		//sql query untuk rekod dari jadual gelanggang
 		$sqlgel="SELECT * FROM gelanggang";
-		$rsgel=mysqli_query($db, $sqlgel);
+		$rsgel=mysqli_query($conn, $sqlgel);
 	?>
 
 	Pilih gelanggang
@@ -59,14 +59,14 @@ if(isset($_POST['namapelanggan']) &&
 		'$telefon','$idgelanggang')";
 	//echo "$sql <br>";
 	//execute sql
-	$rs=mysqli_query($db, $sql);
+	$rs=mysqli_query($conn, $sql);
 	//semak 
 	if($rs==true){
 		echo "Tempahan untuk $namapelanggan 
 		berjaya disimpan";
 	}else{
 		echo "Tempahan gagal disimpan";
-		echo mysqli_error($db);
+		echo mysqli_error($conn);
 	}
 }
 else{

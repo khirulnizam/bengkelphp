@@ -16,11 +16,11 @@ $sql="update makanan set
     kategori='$kategori' 
     where id='$id' ";
 //execute
-$rs=mysqli_query($db, $sql);
+$rs=mysqli_query($conn, $sql);
 //echo "Sql: $sql <br>";//debugging
 if($rs==false){//gagal
     //debug
-    echo "Error: ".mysqli_error($db);
+    echo "Error: ".mysqli_error($conn);
 }else{//berjaya simpan rekod baru
     //echo "Berjaya simpan rekod";
     header ("location: 01formcarianmakan.php?msg=Berjaya kemaskini menu $menu");//redirect

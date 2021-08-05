@@ -60,10 +60,10 @@
             href="https://www.youtube.com/c/FSTMKUISFakultiSainsTeknologiMaklumat">Rakaman Youtube BengkelPHP</a></li>
 
 
-          <li class="drop-down"><a href="">Menu Pelajar</a>
+          <li class="drop-down"><a href="">Menu Staf</a>
             <ul>
-              <li><a href="searchadmin.php">Carian pelajar</a></li>
-              <li><a href="forminsert.php">Tambah rekod pelajar</a></li>
+              <li><a href="00formcarian.php">Carian staf</a></li>
+              <li><a href="00forminsert.php">Tambah rekod staf</a></li>
             </ul>
           </li>
           <li><a target="_blank" href="http://fstm.kuis.edu.my/blog/">Hubungi</a></li>

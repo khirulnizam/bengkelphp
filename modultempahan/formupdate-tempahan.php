@@ -10,7 +10,7 @@ $sql="SELECT id, namapelanggan, tarikh, telefon
 	 FROM tempahan
      WHERE id='$id' ";
 //run sql query
-$rs = mysqli_query($db, $sql);
+$rs = mysqli_query($conn, $sql);
 //capture record
 $rec=mysqli_fetch_array($rs);
 $namapelanggan=$rec['namapelanggan'];

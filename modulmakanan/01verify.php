@@ -8,7 +8,7 @@
         $sql="select * from pengguna 
             where namapengguna='$namapengguna'
             AND katalaluan='$katalaluan' ";
-        $rs=mysqli_query($db,$sql);
+        $rs=mysqli_query($conn,$sql);
         if(mysqli_num_rows($rs)==1){
             //namapengguna ada, password betul
 
@@ -22,7 +22,7 @@
         }
         else{
             //echo "Tak jumpa<br>";
-            //echo "SQL error: ".mysqli_error($db);
+            //echo "SQL error: ".mysqli_error($conn);
             //echo "<br>SQL: ".$sql;
             header ("location: 01formlogin.php?msg=Namapengguna atau katalaluan tak sah");
         }
