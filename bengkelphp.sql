@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
--- Host:                         localhost
--- Server version:               5.7.24 - MySQL Community Server (GPL)
+-- Host:                         127.0.0.1
+-- Server version:               5.7.33 - MySQL Community Server (GPL)
 -- Server OS:                    Win64
--- HeidiSQL Version:             10.2.0.5599
+-- HeidiSQL Version:             11.3.0.6295
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -10,6 +10,7 @@
 /*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
 -- Dumping database structure for bengkelphp
@@ -26,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `gelanggang` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
--- Dumping data for table bengkelphp.gelanggang: ~6 rows (approximately)
+-- Dumping data for table bengkelphp.gelanggang: ~9 rows (approximately)
 /*!40000 ALTER TABLE `gelanggang` DISABLE KEYS */;
 INSERT INTO `gelanggang` (`id`, `namagelanggang`, `imej`, `jenisukan`, `idpetugas`) VALUES
 	(1, 'BolaA', '', 'bolasepak', 0),
@@ -48,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `pelajar` (
   PRIMARY KEY (`IDPelajar`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
--- Dumping data for table bengkelphp.pelajar: ~7 rows (approximately)
+-- Dumping data for table bengkelphp.pelajar: ~6 rows (approximately)
 /*!40000 ALTER TABLE `pelajar` DISABLE KEYS */;
 INSERT INTO `pelajar` (`IDPelajar`, `NamaPel`, `Alamat`) VALUES
 	(1, 'Khirulnizam bin Abd Rahman rtrtrtrtrtrtrtr', 'JSK FSTM, KUIS, Bangi Selangor'),
@@ -65,19 +66,34 @@ CREATE TABLE IF NOT EXISTS `pengguna` (
   `namapengguna` varchar(20) NOT NULL,
   `katalaluan` varchar(255) NOT NULL,
   `namapenuh` varchar(100) NOT NULL,
+  `tahapcapaian` char(50) DEFAULT NULL,
   PRIMARY KEY (`namapengguna`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table bengkelphp.pengguna: ~5 rows (approximately)
+-- Dumping data for table bengkelphp.pengguna: ~6 rows (approximately)
 /*!40000 ALTER TABLE `pengguna` DISABLE KEYS */;
-INSERT INTO `pengguna` (`id`, `namapengguna`, `katalaluan`, `namapenuh`) VALUES
-	(3, 'abc', 'e19d5cd5af0378da05f63f891c7467af', 'abc'),
-	(4, 'admin', '0192023a7bbd73250516f069df18b500', 'Abam Min'),
-	(2, 'ali', '984d8144fa08bfc637d2825463e184fa', 'Ali Ahmad'),
-	(5, 'aminah', 'a531e7e035240addd10db9ff18656bc4', 'Aminah Wahab'),
-	(1, 'kerul', 'e99a18c428cb38d5f260853678922e03', 'Khirulnizam Abd Rahman'),
-	(6, 'kn', '63202e0f4a126c15d8e810307ab7bee1', 'Khirul Nizam');
+INSERT INTO `pengguna` (`id`, `namapengguna`, `katalaluan`, `namapenuh`, `tahapcapaian`) VALUES
+	(3, 'abc', 'e19d5cd5af0378da05f63f891c7467af', 'abc', 'admin'),
+	(4, 'admin', '0192023a7bbd73250516f069df18b500', 'Abam Min', 'superadmin'),
+	(2, 'ali', '984d8144fa08bfc637d2825463e184fa', 'Ali Ahmad', 'admin'),
+	(5, 'aminah', 'a531e7e035240addd10db9ff18656bc4', 'Aminah Wahab', NULL),
+	(1, 'kerul', 'e99a18c428cb38d5f260853678922e03', 'Khirulnizam Abd Rahman', NULL),
+	(6, 'kn', '63202e0f4a126c15d8e810307ab7bee1', 'Khirul Nizam', NULL);
 /*!40000 ALTER TABLE `pengguna` ENABLE KEYS */;
+
+-- Dumping structure for table bengkelphp.staf
+CREATE TABLE IF NOT EXISTS `staf` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) DEFAULT NULL,
+  `noic` char(12) DEFAULT NULL,
+  `bahagian` char(10) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `noic` (`noic`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table bengkelphp.staf: ~0 rows (approximately)
+/*!40000 ALTER TABLE `staf` DISABLE KEYS */;
+/*!40000 ALTER TABLE `staf` ENABLE KEYS */;
 
 -- Dumping structure for table bengkelphp.tempahan
 CREATE TABLE IF NOT EXISTS `tempahan` (
@@ -90,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `tempahan` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table bengkelphp.tempahan: ~4 rows (approximately)
+-- Dumping data for table bengkelphp.tempahan: ~5 rows (approximately)
 /*!40000 ALTER TABLE `tempahan` DISABLE KEYS */;
 INSERT INTO `tempahan` (`id`, `namapelanggan`, `telefon`, `tarikh`, `idadmin`, `idgelanggang`) VALUES
 	(2, 'Ali Baihaqi', '012345678', '2021-02-24', NULL, 'BadA'),
@@ -101,5 +117,6 @@ INSERT INTO `tempahan` (`id`, `namapelanggan`, `telefon`, `tarikh`, `idadmin`, `
 /*!40000 ALTER TABLE `tempahan` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;

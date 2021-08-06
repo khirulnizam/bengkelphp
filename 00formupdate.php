@@ -1,4 +1,8 @@
 <?php
+include "00checksession.php";
+if($_SESSION['tahapcapaian']!="superadmin"){
+    header ('location: 00login.php?error=Tiada hak capaian');
+}
 include "header.bootslander.php";
 ?>
 <!-- 00formupdate.php -->

@@ -1,16 +1,15 @@
 <?php
+    include "00checksession.php";
     include "header.bootslander.php";
 ?>
 <?php
-    if(isset($_GET['success'])){
-        $success=$_GET['success'];
-        echo "<div class='alert alert-success'>
-            $success </div>";
-    }
-    if(isset($_GET['error'])){
-        $error=$_GET['error'];
-        echo "<div class='alert alert-warning'>
-            $error </div>";
+    include "00alert.php";
+?>
+<?php
+if(isset($_SESSION['namapenuh']) && 
+        isset ($_SESSION['namapengguna']) ){
+            echo "Selamat Datang ".$_SESSION['namapenuh']."<br>";
+
     }
 ?>
 <form action="" method="get" class="form-inline">

@@ -1,21 +1,10 @@
 <?php
+include "00checksession.php";
 include "header.bootslander.php";
 ?>
 <!-- 00formupdate.php -->
 <h1>Simpan rekod baru staff</h1>
-<?php
-    if(isset($_GET['success'])){
-        $success=$_GET['success'];
-        echo "<div class='alert alert-success'>
-            $success </div>";
-    }
-    if(isset($_GET['error'])){
-        $error=$_GET['error'];
-        echo "<div class='alert alert-warning'>
-            $error </div>";
-    }
-
-?>
+<?php include "00alert.php" ?>
 <form action="00simpanrekodbaru.php" method="post">
     NoIC
     <input type="text" name="noic" maxlength="12"

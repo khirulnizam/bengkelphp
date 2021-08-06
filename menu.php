@@ -1,22 +1,22 @@
 <!-- menu.php
      YOUR MENU HERE -->
 
-     <h4>Menu pelajar</h4>
-    <a href="searchadmin.php" class="btn btn-primary btn-block">
-    Carian pelajar</a>
-    <a href="forminsert.php" class="btn btn-primary btn-block">
-    Tambah rekod pelajar</a>
+     <h4>Pengurusan staff</h4>
+    <a href="00formcarian.php" class="btn btn-primary btn-block">
+    Carian staff</a>
+    <a href="00forminsert.php" class="btn btn-primary btn-block">
+    Tambah rekod staff</a>
 
 <a target="_blank" href="https://www.youtube.com/c/FSTMKUISFakultiSainsTeknologiMaklumat" 
 class="btn btn-secondary btn-block">
     Rakaman Youtube BengkelPHP</a>
 <!--  MENU LOGIN -->
 
-     <?php
+<?php
 if(!isset($_SESSION["namapengguna"])) { //if session NOT set
-    echo '<a href="login.php" class="btn btn-success btn-block">Login</a>';
+    echo '<a href="00login.php" class="btn btn-success btn-block">Login</a>';
 }else{
-    echo '<a href="logout.php" class="btn btn-primary btn-block">Logout</a>';
+    echo '<a href="00logout.php" class="btn btn-primary btn-block">Logout</a>';
 } ?>
 
     
