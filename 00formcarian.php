@@ -1,5 +1,5 @@
 <?php
-    include "00checksession.php";
+    //include "00checksession.php";
     include "header.bootslander.php";
 ?>
 <?php

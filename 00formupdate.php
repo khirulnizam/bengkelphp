@@ -1,8 +1,8 @@
 <?php
-include "00checksession.php";
-if($_SESSION['tahapcapaian']!="superadmin"){
-    header ('location: 00login.php?error=Tiada hak capaian');
-}
+//include "00checksession.php";
+//if($_SESSION['tahapcapaian']!="superadmin"){
+    //header ('location: 00login.php?error=Tiada hak capaian');
+//}
 include "header.bootslander.php";
 ?>
 <!-- 00formupdate.php -->
@@ -31,7 +31,13 @@ include "header.bootslander.php";
     $noic=$rec['noic'];
     $nama=$rec['nama'];
     $bahagian=$rec['bahagian'];
+    $imejprofile=$rec['imejprofile'];
+
+    if ($imejprofile!=null){
+        echo "<img src='uploads/$imejprofile' width='50%'>";
+    }
 ?>
+
 <form action="00simpanupdate.php" method="post">
     <input type="hidden" name="id" value="<?php echo $id ?>" >
     NoIC
