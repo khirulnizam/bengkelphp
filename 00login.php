@@ -23,7 +23,7 @@
     <input type="password" name="katalaluan"
     class="form-control">
     <button type="submit"
-    class="btn">Login</button>
+    class="btn btn-primary">Login</button>
 </form>
 
 <?php

@@ -31,11 +31,17 @@ if(isset($_GET['carian'])){
 include "connection.php";
 
 //dapatkan senarai staf dari table staf
-$sql="SELECT id, noic, nama, bahagian FROM staf
-        WHERE nama LIKE '%$carian%' ";
+$sql="SELECT id, noic, nama, bahagian, desbhgn 
+        FROM staf
+        INNER JOIN bahagian
+        ON bahagian = kodbhgn
+        WHERE nama LIKE '%$carian%' 
+        ";
 //sql hantar ke dbserver
 //resultset
 $result=mysqli_query($conn, $sql);
+//echo $sql;
+//echo mysqli_error($conn);
 
 //tiada padanan dijumpai
 if(mysqli_num_rows($result)==0){
@@ -63,7 +69,7 @@ else{
         echo "<td>". $rec['id']."</td>";
         echo "<td>". $rec['noic']."</td>";
         echo "<td>". $rec['nama']."</td>";
-        echo "<td>". $rec['bahagian']."</td>";
+        echo "<td>". $rec['desbhgn']."</td>";
         $id=$rec['id'];
         echo "<td> <a href='00formupdate.php?id=$id' 
             class='btn btn-warning'>

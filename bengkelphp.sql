@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               5.7.33 - MySQL Community Server (GPL)
+-- Server version:               10.4.20-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
 -- HeidiSQL Version:             11.3.0.6295
 -- --------------------------------------------------------
@@ -17,13 +17,32 @@
 CREATE DATABASE IF NOT EXISTS `bengkelphp` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `bengkelphp`;
 
+-- Dumping structure for table bengkelphp.bahagian
+CREATE TABLE IF NOT EXISTS `bahagian` (
+  `kodbhgn` varchar(10) DEFAULT NULL,
+  `desbhgn` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table bengkelphp.bahagian: ~8 rows (approximately)
+/*!40000 ALTER TABLE `bahagian` DISABLE KEYS */;
+INSERT INTO `bahagian` (`kodbhgn`, `desbhgn`) VALUES
+	('JSK', 'Jabatan Sains Komputer'),
+	('JTMK', 'Jabatan Teknologi Muktimedia Kreatif'),
+	('TPP', 'Bahagian Teknologi Perisian Pembangunan Aplikasi Web'),
+	('TPM', 'Bahagian Teknologi Perisian Multimedia Interaktif'),
+	('BPA', 'Bahagian Pengurusan Akademik'),
+	('BB', 'Bendahari'),
+	('PP', 'Pejabat Pendaftar'),
+	('PA', 'Perhubungan Awam');
+/*!40000 ALTER TABLE `bahagian` ENABLE KEYS */;
+
 -- Dumping structure for table bengkelphp.gelanggang
 CREATE TABLE IF NOT EXISTS `gelanggang` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `namagelanggang` varchar(50) NOT NULL DEFAULT '',
   `imej` varchar(200) NOT NULL DEFAULT '',
   `jenisukan` varchar(200) NOT NULL DEFAULT '',
-  `idpetugas` int(11) NOT NULL DEFAULT '0',
+  `idpetugas` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
@@ -89,10 +108,15 @@ CREATE TABLE IF NOT EXISTS `staf` (
   `bahagian` char(10) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `noic` (`noic`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
--- Dumping data for table bengkelphp.staf: ~0 rows (approximately)
+-- Dumping data for table bengkelphp.staf: ~4 rows (approximately)
 /*!40000 ALTER TABLE `staf` DISABLE KEYS */;
+INSERT INTO `staf` (`id`, `nama`, `noic`, `bahagian`) VALUES
+	(1, 'Khirulnizam Rahman', '700707070707', 'JSK'),
+	(2, 'Aminah Hassan', '800808080808', 'TPP'),
+	(3, 'Ali Abu', '123456789012', 'JTMK'),
+	(4, 'Hafiz Tabrani', '300303030303', 'PA');
 /*!40000 ALTER TABLE `staf` ENABLE KEYS */;
 
 -- Dumping structure for table bengkelphp.tempahan

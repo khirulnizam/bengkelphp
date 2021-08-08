@@ -15,10 +15,20 @@ include "header.bootslander.php";
     class="form-control">
 
     Bahagian
+    <!-- 00forminsert.php -->
+    
     <select name="bahagian" class="form-control">
-        <option value="JTMK">JTMK</option>
-        <option value="JTPP">JTPP</option>
-        <option value="JSK">Jabatan Sains Komputer</option>
+    <?php
+        include "connection.php";
+        $sql="SELECT * FROM bahagian";
+        $result=mysqli_query($conn, $sql);
+        //echo mysqli_error($conn);
+        while($rec=mysqli_fetch_array($result)){
+            $kodbhgn=$rec['kodbhgn'];
+            $desbhgn=$rec['desbhgn'];
+            echo "<option value='$kodbhgn'> $desbhgn </option>";
+        }
+    ?>   
     </select><br>
     <button type="submit" class="btn btn-primary">Simpan rekod staff</button>
 </form>
